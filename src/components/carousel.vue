@@ -46,24 +46,29 @@ import cards from './cards'
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                420: {
+                768: {
                 slidesPerView: 2,
                 spaceBetween: 40,
-                },
-                868: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-                pagination: {
-                    el: '.swiper-pagination',
+                 pagination: {
+                    el: null,
                     clickable: true,
                     dynamicBullets:false,
                 },
                 },
-                1024: {
+                868: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+                 pagination: {
+                    el: null,
+                    clickable: true,
+                    dynamicBullets:false,
+                },
+                },
+                1400: {
                 slidesPerView: 5,
                 spaceBetween: 50,
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: null,
                     clickable: true,
                     dynamicBullets:false,
                 },

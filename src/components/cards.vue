@@ -7,25 +7,18 @@
       class="red--text align-end"
       height="150px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    >
+      >
     </v-img>
     <v-card-text class="text--primary">
       <div>Whitsunday Island</div>
     </v-card-text>
 
     <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Share
-      </v-btn>
-
-      <v-btn
-        color="orange"
-        text
-      >
-        Explore
+      <v-btn color="green" text>
+        Add to cart
+        <v-icon right>
+          mdi-cart-arrow-up
+        </v-icon>
       </v-btn>
     </v-card-actions>
   </v-card>

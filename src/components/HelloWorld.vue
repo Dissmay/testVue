@@ -16,7 +16,7 @@
       {{nameBtn}}
     </v-btn>
     <v-btn @click="indexOriginal" v-if="originalPosition">
-      Показать только 8 елементов
+      Go back
     </v-btn>
   </v-container>
 </template>
@@ -86,7 +86,6 @@
     watch:{
       index(){
         if(this.index > 31 || this.index == 31){
-          this.nameBtn = 'Товаров больше нет';
           this.originalPosition = true;
           return 
         }

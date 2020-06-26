@@ -1,8 +1,7 @@
 <template>
  <v-app>
-  <HelloWorld></HelloWorld>
-   <br>
-  <Carousel></Carousel>
+  <HelloWorld/>
+  <Carousel/>
  </v-app>
 </template>
 
