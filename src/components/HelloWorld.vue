@@ -13,10 +13,10 @@
       </v-col>
     </v-row>
     <v-btn @click="indexD" v-if="!originalPosition"> 
-        {{nameBtn}}
+      {{nameBtn}}
     </v-btn>
     <v-btn @click="indexOriginal" v-if="originalPosition">
-        Показать только 8 елементов
+      Показать только 8 елементов
     </v-btn>
   </v-container>
 </template>
@@ -35,7 +35,8 @@
         {name:1},{name:1},{name:1},{name:1},{name:1}, {name:1},{name:1},{name:1},
         {name:1},{name:1},{name:1},{name:1},{name:1},{name:1},{name:1},{name:1},
       ],
-      index: 8,
+      index: 10,
+      number:10,
       nameBtn: 'Show More',
       originalPosition: false
     }),
@@ -52,19 +53,39 @@
         if(this.index > lastIndex || this.index == lastIndex){
           return
         }else{
-          this.index = this.index + 8;
+          this.index = this.index + this.number;
         }
       },
       indexOriginal(){
-        this.index = 8;
+        this.index = this.number;
         this.originalPosition = false;
       }
     },
     created(){
+      if(window.innerWidth == 1420){
+        this.number = 10;
+        this.index = 10;
+      }
+      if(window.innerWidth == 1920){
+        this.number = 16;
+        this.index = 16;
+      }
+      if(window.innerWidth == 1024){
+        this.number = 8;
+        this.index = 8;
+      }
+      if(window.innerWidth == 736){
+        this.number = 6;
+        this.index = 6;
+      }
+      if(window.innerWidth == 344){
+        this.number = 2;
+        this.index = 2;
+      }
     },
     watch:{
       index(){
-         if(this.index > 31 || this.index == 31){
+        if(this.index > 31 || this.index == 31){
           this.nameBtn = 'Товаров больше нет';
           this.originalPosition = true;
           return 
